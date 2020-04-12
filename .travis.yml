@@ -26,7 +26,7 @@ addons:
   code_climate:
     repo_token: "$CODE_CLIMATE"
 deploy:
-  provider: s3
+- provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: workpals-bucket
@@ -46,7 +46,3 @@ deploy:
   region: us-east-2
   on:
     repo: WorkPalsCO/Frontend
-script:
-  - zip -r latest * --quiet
-  - mkdir -p build
-  - mv latest.zip build/latest.zip
