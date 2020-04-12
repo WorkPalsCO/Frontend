@@ -8,5 +8,5 @@ Help others while creating __human experiences__!
 ## Team Members:
 
 * [Alejo Lopez](https://www.linkedin.com/in/alejolo311/)
-<br>
+</br>
 * [Andres Rojas](https://www.linkedin.com/in/andreserojasi/)
