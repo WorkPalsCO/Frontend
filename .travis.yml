@@ -60,5 +60,5 @@ deploy:
 
 script:
   - zip -r latest * --quiet
-  - mkdir -p dpl_cd_upload
-  - mv latest.zip dpl_cd_upload/latest.zip
+  - mkdir -p build
+  - mv latest.zip build/latest.zip
