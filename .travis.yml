@@ -1,0 +1,46 @@
+dist: trusty
+
+sudo: false
+
+language: node_js
+
+node_js:
+  - 8 
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
+
+branches:
+  only:
+    - master
+    - stage
+    - prod
+
+cache:
+  directories:
+    - $HOME/.npm
+
+install:
+  - npm i
+  - npm i firebase-ci@^0.5.0 # install deps used in creating config and deploying
+
+script:
+  
+  - npm run lint
+  - npm run test
+  - npm run build
+
+addons:
+  code_climate:
+    repo_token: $CODE_CLIMATE
+
+deploy:
+  skip_cleanup: true
+  provider: s3
+  access_key_id: $AWS_KEY
+  secret_access_key: $AWS_SECRET
+  bucket: $AWS_BUCKET
+  acl: public_read
+  local_dir: dist

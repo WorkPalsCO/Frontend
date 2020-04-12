@@ -1,0 +1,29 @@
+{
+  "generator-react-firebase": {
+    "promptValues": {
+      "githubUser": "andreserojasi",
+      "firebaseName": "work-pals",
+      "firebaseKey": "AIzaSyBle6XiwHG7TsLsqeUj8zXlYVsFwuOYy-k",
+      "includeRedux": true,
+      "includeFirestore": true,
+      "otherFeatures": [
+        "Continuous Integration config",
+        "Firebase Cloud Messaging",
+        "Firebase Functions (with ESNext support)",
+        "Tests for Firebase Functions (Mocha/Chai or Jest)",
+        "Tests for React Components (Jest)",
+        "Firebase Analytics",
+        "Segment.io Analytics",
+        "Error Tracking (Sentry.io)",
+        "Client Side Error Reporting (Stackdriver)"
+      ],
+      "functionsTestTool": "mocha",
+      "messagingSenderId": "789861936278",
+      "measurementId": "G-BBWJD3R1YD",
+      "appId": "1:789861936278:web:4c91f20303fc962d0366b7",
+      "firebasePublicVapidKey": "",
+      "ciProvider": "travis",
+      "deployTo": "s3"
+    }
+  }
+}
