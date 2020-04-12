@@ -38,8 +38,8 @@ addons:
 deploy:
 - provider: s3
   skip_cleanup: true
-  access_key_id: $AWS_KEY
-  secret_access_key: $AWS_SECRET
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   bucket: $AWS_BUCKET
   acl: public_read
   local_dir: dist
