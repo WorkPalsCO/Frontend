@@ -27,6 +27,7 @@ addons:
     repo_token: "$CODE_CLIMATE"
 deploy:
 - provider: s3
+  skip_cleanup: true
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: workpals-bucket
@@ -36,6 +37,7 @@ deploy:
   on:
     repo: WorkPalsCO/Frontend
 - provider: codedeploy
+  skip_cleanup: true
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: workpals-bucket
