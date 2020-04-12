@@ -36,7 +36,6 @@ deploy:
   on:
     repo: WorkPalsCO/Frontend
 - provider: codedeploy
-  skip_cleanup: true
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket: workpals-bucket
@@ -48,6 +47,6 @@ deploy:
   on:
     repo: WorkPalsCO/Frontend
 script:
-- zip -r latest * --quiet
+- zip -r latest build --quiet
 - mkdir -p build
 - mv latest.zip build/latest.zip
