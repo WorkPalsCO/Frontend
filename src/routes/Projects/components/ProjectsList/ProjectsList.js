@@ -17,7 +17,8 @@ import styles from './ProjectsList.styles'
 const useStyles = makeStyles(styles)
 
 function useProjectsList() {
-  const { showSuccess, showError } = useNotifications()const firestore = useFirestore()
+  const { showSuccess, showError } = useNotifications();
+  const firestore = useFirestore()
 
   // Get auth from redux state
   const auth = useSelector(({ firebase: { auth } }) => auth)

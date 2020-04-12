@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import firebase from 'react-redux-firebase/lib/reducer'
 import firestore from 'redux-firestore/lib/reducer'
-import { reducer as notifications } from 'modules/notification'
+//import { reducer as notifications } from 'modules/notification'
 import locationReducer from './location'
 
 export function makeRootReducer(asyncReducers) {
@@ -9,7 +9,7 @@ export function makeRootReducer(asyncReducers) {
     // Add sync reducers here
     firebase,
     firestore,
-    notifications,
+    //notifications,
     location: locationReducer,
     ...asyncReducers
   })

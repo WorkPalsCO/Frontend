@@ -1,6 +1,6 @@
 import { get } from 'lodash'
 import firebase from 'firebase/app'
-import messageActions from 'modules/notification'
+import messageActions from '../modules/notification'
 import { publicVapidKey } from '../config'
 import 'firebase/messaging'
 
@@ -57,7 +57,7 @@ function getTokenAndWriteToProfile() {
  * user's profile.
  * @param {Function} dispatch - redux action dispatching function
  */
-export function initializeMessaging(dispatch) {
+function initializeMessaging(dispatch) {
   const messaging = firebase.messaging()
   if (!publicVapidKey) {
     /* eslint-disable no-console */
@@ -97,3 +97,5 @@ export function initializeMessaging(dispatch) {
       return Promise.reject(err)
     })
 }
+
+export default initializeMessaging;
