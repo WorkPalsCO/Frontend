@@ -42,7 +42,7 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   bucket: $AWS_BUCKET
   acl: public_read
-  local_dir: dist
+  local_dir: build
   on: &2
     repo: WorkPalsCO/Frontend
   bucket: workpals-bucket
